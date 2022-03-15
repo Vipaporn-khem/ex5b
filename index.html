@@ -15,6 +15,7 @@
 		<form role="form" method="GET">
 		  <div class="form-group">
 			<label for="tem">Current temperature:</label>
+			<hr>
 			<input type="text" class="form-control" name="temp" id="temp" value="20">
 		  </div><br>
 		  <div class="form-group">
@@ -34,7 +35,7 @@
 	<script>
 	    $(document).ready(function(){
 			$("button").click(function(){
-			   var t = $('#temp').val();//celsius
+			   var t = parseInt($('#temp').val());//celsius
 			   var u = $('#unit').val();
 			   
 			   if(isNaN(t)){
